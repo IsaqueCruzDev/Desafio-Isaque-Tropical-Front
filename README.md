@@ -98,7 +98,6 @@ await axios.post('http://127.0.0.1:5000/uploadfile', formData, {
 ## 📜 Principais Funcionalidades
 
 ✅ Criar propriedades no **HubSpot**
-✅ Listar propriedades existentes
 ✅ Upload de arquivos CSV/XLSX
 ✅ Processamento de arquivos na API em **Python**
 ✅ Gerenciamento de estado com **Zustand**
