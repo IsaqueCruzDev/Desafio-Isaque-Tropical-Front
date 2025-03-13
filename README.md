@@ -12,8 +12,6 @@ Este projeto é um frontend desenvolvido em **React** com **Vite** e **TypeScrip
 - **Tailwind CSS** - Estilização
 - **Material UI** - Componentes estilizados
 - **Axios** - Consumo de APIs
-- **PapaParse** - Manipulação de arquivos CSV
-- **XLSX** - Manipulação de arquivos Excel
 - **Zod** - Validação de schemas
 - **React Toastify** - Notificações
 
