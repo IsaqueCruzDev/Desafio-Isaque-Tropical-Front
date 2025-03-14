@@ -12,8 +12,6 @@ Este projeto é um frontend desenvolvido em **React** com **Vite** e **TypeScrip
 - **Tailwind CSS** - Estilização
 - **Material UI** - Componentes estilizados
 - **Axios** - Consumo de APIs
-- **PapaParse** - Manipulação de arquivos CSV
-- **XLSX** - Manipulação de arquivos Excel
 - **Zod** - Validação de schemas
 - **React Toastify** - Notificações
 
@@ -100,7 +98,6 @@ await axios.post('http://127.0.0.1:5000/uploadfile', formData, {
 ## 📜 Principais Funcionalidades
 
 ✅ Criar propriedades no **HubSpot**
-✅ Listar propriedades existentes
 ✅ Upload de arquivos CSV/XLSX
 ✅ Processamento de arquivos na API em **Python**
 ✅ Gerenciamento de estado com **Zustand**
