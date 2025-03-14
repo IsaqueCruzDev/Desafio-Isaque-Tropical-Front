@@ -4,13 +4,10 @@ import { propertySchema } from "../../../modules/Property/property.schema";
 import { z } from "zod";
 import { toast } from "react-toastify";
 import { checkPropertyExistis, createProperty, xlsxGenerate } from "../../../modules/Property/property.server";
+import { UsePropertyFooterProps } from "./property-footer.type";
 
-type usePropertyFooterProps = {
-    properties: PropertyType[]
-}
-
-export default function usePropertyFooter({ properties }: usePropertyFooterProps) {
-    const [errors, setErrors] = useState<{ [key: string]: string }>({});
+export default function usePropertyFooter({ properties }: UsePropertyFooterProps) {
+    const [zodErrors, setZodErrors] = useState<{ [key: string]: string }>({});
     const [open, setOpen] = useState(false)
     const [serverPropertiesLogs, setServerPropertiesLogs] = useState<{ name: string, message: string, group: string, type: string }[]>([]);
 
@@ -27,7 +24,7 @@ export default function usePropertyFooter({ properties }: usePropertyFooterProps
                 }
             }
         });
-        setErrors(newErrors);
+        setZodErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     };
     
@@ -99,7 +96,7 @@ export default function usePropertyFooter({ properties }: usePropertyFooterProps
             throw error
         }
     }
-    console.log('errors', errors)
+    console.log('errors', zodErrors)
     return {
         open,
         setOpen,

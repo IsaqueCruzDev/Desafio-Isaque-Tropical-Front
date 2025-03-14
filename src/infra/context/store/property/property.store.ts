@@ -44,8 +44,10 @@ export const useStore = create<PropertyStoreType>((set) => ({
                 return;
             }
     
-            set(() => ({
-                properties: data.map((item: PropertyType) => ({
+            set((state) => ({
+                properties: [
+                ...state.properties,
+                ...data.map((item: PropertyType) => ({
                     id: uuidv4(),
                     type: item.type || '',
                     label: item.label || '',
@@ -54,6 +56,7 @@ export const useStore = create<PropertyStoreType>((set) => ({
                     groupName: item.groupName || '',
                     objectType: item.objectType || ''
                 }))
+            ]
             }));
         } catch (error) {
             console.error("Erro ao processar upload:", error);

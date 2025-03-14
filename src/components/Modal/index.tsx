@@ -1,6 +1,6 @@
-import ModalBox from "./ModalBox/ModalBox";
-import ModalFooter from "./ModalFooter/ModalFooter";
-import ModalRoot from "./ModalRoot/ModalRoot";
+import ModalBox from "./ModalBox/modal-box.viewmodel";
+import ModalFooter from "./ModalFooter/modal-footer.viewmodel";
+import ModalRoot from "./ModalRoot/modal-root.viewmodel";
 
 const Modal = {
     Root: ModalRoot,

@@ -1,13 +1,7 @@
 import { Modal } from "@mui/material";
-import { ReactElement } from "react";
+import { ModalRootProps } from "./modal-root.type";
 
-interface ModalRootProps {
-    children: ReactElement
-    open: boolean
-    handleClose: () => void
-}
-
-export default function ModalRoot({ open, handleClose, children }: ModalRootProps) {
+export default function ModalRootView({ open, handleClose, children }: ModalRootProps) {
     return (
         <Modal
             open={open}

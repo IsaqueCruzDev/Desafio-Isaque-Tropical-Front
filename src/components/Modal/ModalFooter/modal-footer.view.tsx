@@ -1,11 +1,7 @@
 import { Button } from "@mui/material"
+import { ModalFooterProps } from "./modal-footer.type"
 
-type ModalRootProps = {
-    handleClose: () => void
-    handleExecute: () => void
-}
-
-export default function ModalFooter({ handleExecute, handleClose }: ModalRootProps) {
+export default function ModalFooterView({ handleExecute, handleClose }: ModalFooterProps) {
     return (
         <footer className='flex justify-end mt-7 gap-2'>
             <Button variant="contained" color='error' onClick={handleClose}>Cancelar</Button>
